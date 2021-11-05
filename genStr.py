@@ -17,7 +17,7 @@ from creds import Credentials
 
 API_TEXT = """👋🏻 **Hi {}**,
 
-I'm **String Session Generator** \nI Can Generate Pyrogram's String Session Of Your Telegram Account.
+I'm **EO String Session Generator** \nI Can Generate Pyrogram's String Session Of Your Telegram Account.
 
 Now Send Your `API_ID` Same As `APP_ID` To Start Generating Session.
 
@@ -30,14 +30,14 @@ PHONE_NUMBER_TEXT = (
 )
 
 
-UPDATES_CHANNEL = os.environ.get('UPDATES_CHANNEL', 'AsmSafone')
+UPDATES_CHANNEL = os.environ.get('UPDATES_CHANNEL', 'eofamilyff')
 
 @bot.on_message(filters.private & filters.command("start"))
 async def genStr(_, msg: Message):
     if msg.chat.id in Credentials.BANNED_USERS:
         await bot.send_message(
             chat_id=msg.chat.id,
-            text="You are Banned. Contact My [Support Group](https://t.me/safothebot)",
+            text="You are Banned. Contact My [Support Group](https://t.me/eosupportff)",
             reply_to_message_id=msg.message_id
         )
         return
